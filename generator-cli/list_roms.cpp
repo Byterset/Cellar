@@ -83,7 +83,7 @@ void ListPage_ROMs::Compile()
     strreplace_all(html_final, "_TEMPLATE_ROMS_DATE_", oss.str());
 
     // Dump the html for the roms page
-    std::ofstream out(outfile);
+    std::ofstream out(outfile, std::ios::binary);
     out << html_final;
     out.close();
 }

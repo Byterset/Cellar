@@ -48,7 +48,7 @@ void ListPage_Authors::Compile()
     strreplace_all(html_final, "_TEMPLATE_AUTHORS_DATE_", date.str());
 
     // Write the HTML file
-    std::ofstream out("authors.html");
+    std::ofstream out("authors.html", std::ios::binary);
     out << html_final;
     out.close();
 }

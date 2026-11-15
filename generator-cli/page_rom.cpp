@@ -259,7 +259,7 @@ void Page_ROM::Compile()
         strreplace_all(html_final, "_TEMPLATE_ROMS_LINKS_", "");
 
     // Generate the page itself
-    std::ofstream out(projoutpath);
+    std::ofstream out(projoutpath, std::ios::binary);
     out << html_final;
     out.close();
 }

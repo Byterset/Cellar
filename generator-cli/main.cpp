@@ -323,7 +323,7 @@ void compile_tags(std::vector<Category*>* pages)
         strreplace_all(html_final, "_TEMPLATE_TAG_PAGELIST_", pagelist);
 
         // Generate the page itself
-        std::ofstream out(tagspath + "/" + tagname_page + ".html");
+        std::ofstream out(tagspath + "/" + tagname_page + ".html", std::ios::binary);
         out << html_final;
         out.close();
     }
@@ -393,7 +393,7 @@ void compile_genres(std::vector<Category*>* pages)
         strreplace_all(html_final, "_TEMPLATE_GENRE_PAGELIST_", pagelist);
 
         // Generate the page itself
-        std::ofstream out(genrespath + "/" + genrename_page + ".html");
+        std::ofstream out(genrespath + "/" + genrename_page + ".html", std::ios::binary);
         out << html_final;
         out.close();
     }
@@ -431,7 +431,6 @@ void compile_homepage(std::vector<Category*>* pages)
     std::sort(latestroms.begin(), latestroms.end(), &rom_sorter_date);
     for (Page_ROM* page : latestroms)
     {
-        std::tm date;
         std::string tableelem;
         if (count == 5)
             break;
@@ -461,7 +460,7 @@ void compile_homepage(std::vector<Category*>* pages)
     strreplace_all(html_final, "_TEMPLATE_LATEST_ROMS_", html_entry);
 
     // Generate the page itself
-    std::ofstream out(homepath);
+    std::ofstream out(homepath, std::ios::binary);
     out << html_final;
     out.close();
 }

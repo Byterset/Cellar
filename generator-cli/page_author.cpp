@@ -83,7 +83,7 @@ void Page_Author::Compile()
     }
     strreplace_all(html_final, "_TEMPLATE_AUTHOR_DESCRIPTION_", html_description);
     strreplace_all(html_final, "_TEMPLATE_AUTHOR_CREDITS_", html_credits);
-    std::ofstream out("authors/" + this->filename + ".html");
+    std::ofstream out("authors/" + this->filename + ".html", std::ios::binary);
     out << html_final;
     out.close();
 }
