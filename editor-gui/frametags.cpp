@@ -92,7 +92,7 @@ FrameTags::FrameTags(wxWindow* parent, wxWindowID id, const wxString& title, con
     m_Sizer_Players->Add(this->m_CheckBox_Players3, 0, wxALL, 5);
     this->m_CheckBox_Players4 = new wxCheckBox(this, wxID_ANY, wxT("4 Player"), wxDefaultPosition, wxDefaultSize, 0);
     m_Sizer_Players->Add(this->m_CheckBox_Players4, 0, wxALL, 5);
-    this->m_CheckBox_Players0 = new wxCheckBox(this, wxID_ANY, wxT("No Players (Video)"), wxDefaultPosition, wxDefaultSize, 0);
+    this->m_CheckBox_Players0 = new wxCheckBox(this, wxID_ANY, wxT("Non-Interactive"), wxDefaultPosition, wxDefaultSize, 0);
     m_Sizer_Players->Add(this->m_CheckBox_Players0, 0, wxALL, 5);
     this->m_CheckBox_PlayersMulti = new wxCheckBox(this, wxID_ANY, wxT("Online Multiplayer"), wxDefaultPosition, wxDefaultSize, 0);
     m_Sizer_Players->Add(this->m_CheckBox_PlayersMulti, 0, wxALL, 5);
@@ -113,7 +113,7 @@ FrameTags::FrameTags(wxWindow* parent, wxWindowID id, const wxString& title, con
     m_Sizer_Accessories->Add(this->m_CheckBox_AccessoriesMouse, 0, wxALL, 5);
     this->m_CheckBox_AccessoriesVRU = new wxCheckBox(this, wxID_ANY, wxT("VRU"), wxDefaultPosition, wxDefaultSize, 0);
     m_Sizer_Accessories->Add(this->m_CheckBox_AccessoriesVRU, 0, wxALL, 5);
-    this->m_CheckBox_AccessoriesGCCont = new wxCheckBox(this, wxID_ANY, wxT("GameCube"), wxDefaultPosition, wxDefaultSize, 0);
+    this->m_CheckBox_AccessoriesGCCont = new wxCheckBox(this, wxID_ANY, wxT("GameCube Controller"), wxDefaultPosition, wxDefaultSize, 0);
     m_Sizer_Accessories->Add(this->m_CheckBox_AccessoriesGCCont, 0, wxALL, 5);
     this->m_CheckBox_AccessoriesGCKeyb = new wxCheckBox(this, wxID_ANY, wxT("GameCube Keyboard"), wxDefaultPosition, wxDefaultSize, 0);
     m_Sizer_Accessories->Add(this->m_CheckBox_AccessoriesGCKeyb, 0, wxALL, 5);
@@ -182,7 +182,7 @@ FrameTags::FrameTags(wxWindow* parent, wxWindowID id, const wxString& title, con
         {"2 Players", this->m_CheckBox_Players2},
         {"3 Players", this->m_CheckBox_Players3},
         {"4 Players", this->m_CheckBox_Players4},
-        {"No Players (Video)", this->m_CheckBox_Players0},
+        {"Non-Interactive", this->m_CheckBox_Players0},
         {"Online Multiplayer", this->m_CheckBox_PlayersMulti},
         {"Rumble Pak", this->m_CheckBox_AccessoriesRumble},
         {"Transfer Pak", this->m_CheckBox_AccessoriesTransfer},
