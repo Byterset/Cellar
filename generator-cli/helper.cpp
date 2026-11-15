@@ -45,6 +45,10 @@ std::string string_fromfile(std::string path)
     // Read the file into the string, and return it
     while (std::getline(file, line))
     {
+        // Strip any trailing \r characters that might be present
+        while (!line.empty() && line.back() == '\r')
+            line.pop_back();
+        
         if (!first)
         {
             str += "\r\n";
